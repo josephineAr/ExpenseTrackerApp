@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 //import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class AuthService {
- static const baseUrl = 'http://10.222.201.103:3000';
+ static const baseUrl = 'http://10.103.198.103:3000';
  //static final storage=FlutterSecureStorage();
 
 
@@ -20,23 +20,20 @@ class AuthService {
 
  }
  
- static Future<Map<String, dynamic>> login(String email, String password) async {
+static Future<Map<String, dynamic>> login(String email, String password) async {
   try {
     final response = await http.post(
-        Uri.parse('$baseUrl/auth/login/'),
+       
+        Uri.parse('$baseUrl/auth/login'), 
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'email': email, 'password': password})
     );
 
-    return {
-      'statusCode': response.statusCode,
-      'body': jsonDecode(response.body),
-    };
+   
+    return jsonDecode(response.body); 
+    
   } catch (e) {
-    return {
-      'statusCode': 500,
-      'body': {'message': 'Connection Error'}
-    };
+    return {'message': 'Connection Error'};
   }
 }
 }
