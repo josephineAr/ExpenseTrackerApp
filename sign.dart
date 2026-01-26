@@ -38,7 +38,7 @@ class _SignState extends State<Sign> {
             
                   Text("TrackFunds",style:TextStyle(fontSize:35,fontWeight:FontWeight.bold),textAlign:TextAlign.center),
            
-           Text("Spend Wisely, Save ffortlessly",style:TextStyle(fontSize:20,fontStyle:FontStyle.italic),textAlign:TextAlign.center),
+           Text("Spend Wisely, Save effortlessly",style:TextStyle(fontSize:20,fontStyle:FontStyle.italic),textAlign:TextAlign.center),
             SizedBox(height:15),
             Text("Sign Up",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold,color:Colors.purple)),
             Padding(padding:EdgeInsets.all(4)),
@@ -68,15 +68,22 @@ class _SignState extends State<Sign> {
               prefixIcon:Icon(Icons.email),
               border:OutlineInputBorder()
              ),
-             validator:(value){
-              if(value ==null||value.isEmpty){
-                return "Please Enter Email";
-              }
-              // if (!value.contains(@)){
-              //   return "Please enter valid Email";
-              // }
-               return null;
-             }
+            validator: (value) {
+  if (value == null || value.isEmpty) {
+    return "Please enter email";
+  }
+
+  // email validation
+  final bool emailValid = RegExp(
+          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+      .hasMatch(value);
+
+  if (!emailValid) {
+    return "Please enter a valid email address";
+  }
+  
+  return null;
+},
           ),SizedBox(height:15),
           TextFormField(
             controller: passwordcontroller,

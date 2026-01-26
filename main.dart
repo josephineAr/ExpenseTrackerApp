@@ -4,7 +4,7 @@ import 'settings.dart';
 import 'sign.dart';
 import 'home.dart';
 import 'about.dart';
-import 'transaction.dart';
+
 import 'splashscreen.dart';
 import 'login.dart';
 import 'navbar.dart';
@@ -51,7 +51,6 @@ class _MyAppState extends State<MyApp> {
             ),
         '/sign': (context) =>  Sign(),
         '/home': (context) => Home(),
-        '/debt': (context) =>  Debt(),
         '/about': (context) => const About(),
         '/login': (context) => login(), 
       },

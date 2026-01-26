@@ -46,7 +46,8 @@ class _NavbarState extends State<Navbar> {
         transactions: _transactions,
       ),
       Reports(
-        transactions: _transactions,
+        
+        userId: widget.userId,
       ),
     ];
 
