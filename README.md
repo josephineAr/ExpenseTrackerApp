@@ -1,18 +1,30 @@
-TrackFunds: A Budget Application
 
-TrackFunds is a budget app that helps users to track savings, expenses and also make budgets.it also helps users to have a record of their spending history, analyze their saving patterns and also helps users to plan for their money through individual or shared budgets.it also helps users to track debts.
 
-Problem being solved
-mismanagement of finances, unexplainable financial gaps and failure to track spendng habits.
+TrackFunds 
 
-Features
-1. Creating Budgets
-2. Adding Transactions
-3. Report Generation
-4. Debt Tracking
+TrackFunds is a simple mobile app designed to helps users manage their money. It helps a user track their debts, monitor their expenses, and create budgets.
 
-Tech stack
-1.Database: PostgresSQL
-2.Language: Dart
-3.Framework: Flutter
-4.Backend: Node js with Express
+The Problem
+
+Many people struggle with financial mismanagement. TrackFunds helps users to keep updated about their spending habits, expenses and income hence reducing confusion and financial mismanagement. 
+
+Key Features
+
+Create Budgets: Plan your spending for the month. You can even create Shared Budgets to manage money with friends or family.
+Add Transactions: Quickly record your income and expenses .
+Report Generation: See a clear pie chart  that shows which categories you spend the most on.
+Debt Tracking: Keep a list of people who owe you money (Debtors) and people you owe (Creditors).
+Spending History: Look back at your past transactions to understand your habits.
+
+Tech Stack
+
+Frontend: Flutter (using the Dart language) 
+Backend: Node.js with Express 
+Database: PostgreSQL 
+
+How it Works
+
+1. Sign Up: Create your account to start tracking.
+2. Set a Budget: Decide how much you want to spend on fspecific categories
+3. Log Spending: Every time you buy something, add it to the app.
+4. Check Reports: Use the Reports to see spending habits.
